@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <form id="myForm">
+            <div class="mb-3">
+              <label for="amount" class="form-label">Amount</label>
+              <input type="text" name="amount" class="form-control" id="amount">
+              <div id="amount-error" class="text-danger"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="buyer" class="form-label">Buyer</label>
+              <input type="text" name="buyer" class="form-control" id="buyer">
+              <div id="buyer-error" class="text-danger"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="receipt_id" class="form-label">Receipt id</label>
+              <input type="text" name="receipt_id" class="form-control" id="receipt_id">
+              <div id="receipt_id-error" class="text-danger"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="items" class="form-label">Items</label>
+              <input type="text" name="items" class="form-control" id="items">
+              <div id="items-error" class="text-danger"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Buyer email</label>
+              <input type="text" name="email" class="form-control" id="email">
+              <div id="email-error" class="text-danger"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="note" class="form-label">Note</label>
+              <input type="text" name="note" class="form-control" id="note">
+              <div id="note-error" class="text-danger"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="city" class="form-label">City</label>
+              <input type="text" name="city" class="form-control" id="city">
+              <div id="city-error" class="text-danger"></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="text" name="phone" class="form-control" id="phone">
+              <div id="phone-error" class="text-danger"></div>
+            </div>
+
+
+            <div class="mb-3">
+              <label for="entry_by" class="form-label">Entry by</label>
+              <input type="text" name="entry_by" class="form-control" id="entry_by">
+              <div id="entry_by-error" class="text-danger"></div>
+            </div>
+
+            <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
