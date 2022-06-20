@@ -14,7 +14,8 @@ var isEmail = (email) => {
   return regex.test(email);
 }
 
-const validation = () => {
+function validation() {
+  var valid = true;
 
   /**
    * Amount
@@ -24,10 +25,10 @@ const validation = () => {
 
   if (!amount) {
     amountError.innerHTML = "Require";
-    false;
+    valid = false;
   } else if (isNaN(amount)) {
     amountError.innerHTML = "Please Input a valid Number";
-    false;
+    valid = false;
   } else {
     amountError.innerHTML = "";
   }
@@ -41,10 +42,10 @@ const validation = () => {
   
     if(!buyer) {
       buyerError.innerHTML = "Require";
-      false;
+      valid = false;
     } else if(buyer.length > 20) {
       buyerError.innerHTML = "Not more than 20 characters";
-      false;
+      valid = false;
     } else {
       buyerError.innerHTML = "";
     }
@@ -59,10 +60,10 @@ const validation = () => {
 
     if(!receipt_id) {
       receipt_idError.innerHTML = "Require";
-      false;
+      valid = false;
     } else if(!isText(receipt_id)) {
       receipt_idError.innerHTML = "Only Text Require No Digit";
-      false;
+      valid = false;
     } else {
       receipt_idError.innerHTML = "";
     }
@@ -77,10 +78,10 @@ const validation = () => {
 
     if(!items) {
       itemsError.innerHTML = "Require";
-      false;
+      valid = false;
     } else if(!isText(items)) {
       itemsError.innerHTML = "Only Text Require No Digit";
-      false;
+      valid = false;
     } else {
       itemsError.innerHTML = "";
     }
@@ -93,10 +94,10 @@ const validation = () => {
 
     if(!email) {
       emailError.innerHTML = "Require";
-      false;
+      valid = false;
     } else if(!isEmail(email)) {
       emailError.innerHTML = "Enter Correct Email Address";
-      false;
+      valid = false;
     } else {
       emailError.innerHTML = "";
     }
@@ -110,10 +111,10 @@ const validation = () => {
   
     if(!note) {
       noteError.innerHTML = "Require";
-      false;
+      valid = false;
     } else if(note.length > 30) {
       noteError.innerHTML = "Not more than 30 wordss";
-      false;
+      valid = false;
     } else {
       noteError.innerHTML = "";
     }
@@ -128,10 +129,10 @@ const validation = () => {
 
     if(!city) {
       cityError.innerHTML = "Require";
-      false;
+      valid = false;
     } else if (!isTextSpacc(city)) {
       cityError.innerHTML = "Only Letter and Spach";
-      false;
+      valid = false;
     } else {
       cityError.innerHTML = "";
     }
@@ -145,13 +146,13 @@ const validation = () => {
 
     if(!phone) {
       phoneError.innerHTML = "Require";
-      false;
+      valid = false;
     } else if(isNaN(phone)) {
       phoneError.innerHTML = "Only numbers";
-      false;
+      valid = false;
     } else if (phone.length > 11) {
       phoneError.innerHTML = "Number will be not grether than 11";
-      false;
+      valid = false;
     } else {
       phoneError.innerHTML = "";
     }
@@ -164,16 +165,16 @@ const validation = () => {
 
     if(!entry_by) {
       entry_byError.innerHTML = "Require";
-      false;
+      valid = false;
     } else if(isNaN(entry_by)) {
       entry_byError.innerHTML = "Only numbers";
-      false;
+      valid = false;
     } else {
       entry_byError.innerHTML = "";
     }
         
 
-  return true;
+  return valid;
 
   
   
@@ -184,7 +185,11 @@ const validation = () => {
   $(document).ready(function() {
     $("#submitBtn").on("click", function(e){
       e.preventDefault();
-      validation();
+      var valid = validation();
+
+      if(valid) {
+        console.log('Hello');
+      }
     })
   })
 })(jQuery);
